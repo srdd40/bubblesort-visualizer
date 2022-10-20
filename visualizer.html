@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Bubble Sort Visualizer</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <a href="index.html">
+            <img id="logo" src="styles/assets/bubbles.png" alt="Logo image" />
+            <p>Bubble Sort</p>
+          </a>
+        </div>
+        <div class="right">
+          <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul id="navUl">
+            <a href="index.html"><li class="navItem li_1">Lernen</li></a>
+            <a href="visualizer.html"
+              ><li class="active navItem li_2">Visualizer</li></a
+            >
+            <a href="quiz.html"><li class="navItem li_3">Quiz</li></a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="visualizerContainer">
+        <section class="menu">
+          <button id="createArrayBtn" class="menuItem" onclick="resetArray()">
+            Generieren
+          </button>
+
+          <div id="steps" class="menuItem">
+            <button id="btnNext" class="menuItem" onclick="nextStep()">
+              Nächster Schritt
+            </button>
+          </div>
+
+          <div class="playPauseContainer">
+            <div id="playBtnContainer" class="menuItem">
+              <i id="btnPlay" class="fas fa-play" onclick="play()"></i>
+            </div>
+            <div id="pause" class="menuItem" onclick="pause()">
+              <i id="btnPause" class="fas fa-pause"></i>
+            </div>
+          </div>
+
+          <div class="slideContainer menuItem">
+            <i class="fas fa-tachometer-alt"></i>
+            <input
+              id="myRange"
+              class="slider"
+              type="range"
+              min="1"
+              max="10"
+              step="1"
+              value="1"
+              oninput="changeSpeed(this.value)"
+            />
+          </div>
+        </section>
+
+        <section class="visualizer">
+          <div id="barContainer"></div>
+        </section>
+
+        <section class="recipe">
+          <div id="recipeContainer"></div>
+        </section>
+      </div>
+    </main>
+
+    <div class="footer-container">
+      <footer>
+        <p><a href="attribution.html" id="attribution">Bildquellen</a></p>
+      </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- GSAP 3 CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+
+    <!-- Own Scripts -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/visualize.js"></script>
+    <script src="scripts/animations.js"></script>
+  </body>
+</html>

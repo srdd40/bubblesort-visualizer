@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attributions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <a href="index.html">
+            <img id="logo" src="styles/assets/bubbles.png" alt="Logo image" />
+            <p>Bubble Sort</p>
+          </a>
+        </div>
+        <div class="right">
+          <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul id="navUl">
+            <a href="index.html"><li class="navItem li_1">Lernen</li></a>
+            <a href="visualizer.html"
+              ><li class="navItem li_2">Visualizer</li></a
+            >
+            <a href="quiz.html"><li class="navItem li_3">Quiz</li></a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <p>Logo:</p>
+    <a href="https://www.flaticon.com/free-icons/bubbles" title="bubbles icons"
+      >Bubbles icons created by kerismaker - Flaticon</a
+    >
+
+    <!-- GSAP 3 CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+
+    <!-- Own Scripts -->
+    <script src="scripts/visualize.js"></script>
+    <script src="scripts/animations.js"></script>
+  </body>
+</html>

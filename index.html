@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Sort Lernen</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <a href="index.html">
+            <img id="logo" src="styles/assets/bubbles.png" alt="Logo image" />
+            <p>Bubble Sort</p>
+          </a>
+        </div>
+        <div class="right">
+          <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul id="navUl">
+            <a href="index.html"><li class="active navItem li_1">Lernen</li></a>
+            <a href="visualizer.html"><li class="navItem li_2">Visualizer</li></a>
+            <a href="quiz.html"><li class="navItem li_3">Quiz</li></a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <h1 id="headerText">Bubble Sort</h1>
+    <main>
+      
+
+      <div class="section">
+        <h3>Allgemeines</h3>
+
+        <div id="btn2Container">
+          <button id="reveal" onclick='toggleDisplay("allgemein", "down2")'>
+            <i id="down2" class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="info" id="allgemein">
+        <h4>Sortieralgorithmus - Definition</h4>
+        <p>
+          Bei einem Sortieralgorithmus (auf Englisch "sort algorithm" oder
+          "sorting algorithm") handelt es sich in der Informatik um ein
+          Sortierverfahren, das ein
+          <strong>Array nach dem gewünschten Suchkriterium</strong> ordnen soll.
+        </p>
+        <h4>Arten von Sortieralgorithmen</h4>
+        <p>Sortieralgorithmen lassen sich generell in vergleichsbasierte und nicht-vergleichsbasierte Verfahren unterteilen.
+          <br>
+          Der Bubble Sort Algorithmus gehört zu den vergleichsbasierten Verfahren. Ebenso dazu gehören z.B. Insertion Sort, Selection Sort und Quick Sort.
+          <br>
+          Zu den nicht-vergleichsbasierten Verfahren gehören Bucket Sort, Counting Sort und Radix Sort
+        </p>
+
+        <h4>Ziel</h4>
+        <p>
+          Das Ziel eines Sortieralgorithmus wie dem Bubble Sort ist es, eine gegebene
+          Menge effizient zu ordnen (auf- oder absteigend).
+        </p>
+        <h4>Bubble Sort - Namensherkunft</h4>
+        <p>
+          Beim Tauschen steigen die Elemente nacheinander bis zu ihrer
+          Zielposition auf. Ganz ähnlich wie aufsteigende Luftblasen (engl.:
+          "bubbles") in einem Glas Mineralwasser. Daher auch der Name Bubble Sort
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>Vorgehen</h3>
+
+        <div id="btn3Container">
+          <button id="reveal" onclick='toggleDisplay("vorgehen", "down3")'>
+            <i id="down3" class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="info" id="vorgehen">
+        <h4>Vorgehen</h4>
+        <p>
+          Beim Bubble Sort Algorithmus werden nebeneinander liegende Elemente
+          paarweise verglichen. Begonnen wird mit den ersten beiden Elementen.
+          Ist Element 1 größer als Element 2, werden die beiden Elemente
+          vertauscht.
+        </p>
+          <br />
+          <div class="imgContainer">
+            <img
+              src="styles/assets/bsp-img-1.svg"
+              alt="Die ersten beiden Elemente der Reihe werden miteinander verglichen. Das erste Element ist größer, es wird getauscht."
+              class="bspImg"
+            />
+          </div>
+          <br />
+          <p>Ist Element 2 größer als Element 1 wird keine Aktion durchgeführt.
+            Danach springt der Algorithmus eine Stelle weiter und vergleicht das
+            zweite Element mit dem dritten.
+          </p>
+          
+          <br />
+          <div class="imgContainer">
+            <img
+              src="styles/assets/bsp-img-2.svg"
+              alt="Das zweite und das dritte Element werden verglichen. Das zweite Element ist kleiner, es wird nicht getauscht. Der Bubble Sort wird mit dem dritten Element weitergeführt."
+              class="bspImg"
+            />
+          </div>
+          <br />
+          <p>
+            Dieser Vorgang wird so lange wiederholt, bis die größte Zahl der Reihe ganz am
+          Ende steht. Damit ist die erste sogenannte "Bubble-Phase" beendet. Es
+          folgt die zweite Bubble-Phase. Hier wird wieder beim ersten Element
+          begonnen und so lange verglichen und getauscht, bis die zweitgrößte
+          Zahl der Reihe an vorletzter Stelle steht. Die Bubble-Phasen werden so
+          lange durchgeführt, bis alle Zahlen aufsteigend sortiert sind.
+          </p>
+          
+          <br />
+          <div class="imgContainer">
+            <img
+              src="styles/assets/bsp-img-3.svg"
+              alt="Alle Elemente der Reihe sind aufsteigend sortiert"
+              class="bspImg"
+            />
+          </div>
+          
+        </p>
+      </div>
+
+      <div class="section">
+        <h3>Komplexität</h3>
+
+        <div id="btn4Container">
+          <button id="reveal" onclick='toggleDisplay("komplex", "down4")'>
+            <i id="down4" class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+      <div class="info" id="komplex">
+        <h4>O-Notation</h4>
+        <p>Was ist die O-Notation überhaupt?
+          <br>
+          Mit ihr soll die Komplexität eines Algorithmus beschrieben werden.
+          Es werden zwei Arten von Komplexität betrachtet. Zum einen die Platzkomplexität und zum Anderen die Zeitkomplexität. Auf letztere gehen wir im weiteren Verlauf genauer ein.
+          <br>
+        </p>
+        <h4>Platzkomplexität</h4>
+        <p>
+          Bei der Platzkomplexität geht es darum, wie viel zusätzlichen Speicherplatz ein Algorithmus in Abhängigkeit von der Größe der Eingabedaten benötigt. 
+          <br>
+          Der Speicher wird beispielsweise für Schleifen- und Hilfsvariablen und temporäre Datenstrukturen benötigt.
+        </p>
+        <h4>Zeitkomplexität</h4>
+        <p>
+          Die Zeitkomplexität beschreibt die Änderung der Ausführungszeit eines Algorithmus, abhängig von der Änderung der Größe der Eingabedaten.
+          <br>
+          Einfacher ausgedrückt: Wi viel langsamer wird ein Algorithmus mit größer werdender Datenmenge?
+        </p>
+        <h4>Komplexitätsklassen</h4>
+        <p>
+          Es gibt unterschiedliche Komplexitätsklassen, beispielsweise O(1), O(n), O(n<sup>2</sup>) oder auch O(log n). Im folgenden beschränken wir uns auf O(n) und O(n<sup>2</sup>), da diese für den Bubble Sort relevant sind.
+        </p>
+        <p>
+          Der Bubble Sort Algorithmus hat eine sehr lange Laufzeit, da er
+          paarweise vorgeht und entsprechend viele Paare verglichen werden
+          müssen. Unterschieden wird beim Bubble Sort zwischen Worst-Case,
+          Average-Case und Best-Case.
+        </p>
+        <h4>Best-Case</h4>
+        <p>
+          Im Best-Case erreicht der Bubble-Sort eine Lauftzeit von O(n). Das ist
+          nur dann der Fall, wenn die Zahlenfolge bereits fertig vorsortiert
+          ist. Der Algorithmus stellt hier bereits in der ersten Iteration fest,
+          dass keine Zahlen vertrauscht werden müssen und terminiert. Die Anzahl
+          der Vergleiche beläuft sich hierbei auf n-1 (wobei n die Anzahl der
+          Zahlen ist). Die höchste Potenz ist hier n, woraus die Zeitkomplexität
+          O(n) folgt.
+        </p>
+        <div class="imgContainer">
+          <img
+            src="styles/assets/best-case.svg"
+            alt="Alle Elemente der Reihe sind aufsteigend sortiert, das ist der Best Case"
+            class="bspImg"
+          />
+        </div>
+        <h4>Worst-Case</h4>
+        <p>
+          Die Worst-Case Zeitkomplexität liegt beim Bubble Sort bei
+          O(n<sup>2</sup>). Das Worst-Case Szenario ist dann gegeben, wenn die
+          zu sortierende Zahlenfolge genau umgekehrt sortiert ist.
+        </p> 
+        <div class="imgContainer">
+          <img
+            src="styles/assets/worst-case.svg"
+            alt="Alle Elemente der Reihe sind absteigend sortiert"
+            class="bspImg"
+          />
+        </div>
+        <p>
+          Zum Beispiel:
+          7 5 4 3 1 soll aufsteigend zu 1 3 4 5 7 sortiert werden. Hierbei
+          wandert das erste Element, die 7, von ganz links nach ganz rechts,
+          dabei muss 4-mal getauscht werden.
+        </p>
+        <div class="imgContainer">
+          <img
+            src="styles/assets/bubble-phase-1.svg"
+            alt="In Bubble Phase 1 werden 4 Tausch durchgeführt"
+            class="bspImg"
+          />
+        </div>
+        <p>
+          
+          In der nächsten Iteration, wird die 5 von ganz links an die vorletzte
+          Position getauscht. Hierfür sind 4 Tauschoperationen nötig.
+        </p>
+        <div class="imgContainer">
+          <img
+            src="styles/assets/bubble-phase-2.svg"
+            alt="In Bubble Phase 2 werden 3 Tauschvorgänge durchgeführt"
+            class="bspImg"
+          />
+        </div>
+        <p>
+          Insgesamt sind 10 Vergleichs- und Tauschoperationen notwendig, um die
+          Zahlenfolge zu sortieren. (4 + 3 + 2 + 1 = 10)
+          <br />
+          Um die Zeitkomplexität herauszufinden geht man wie folgt vor: 5 * 4 *
+          &frac12; = 20 * &frac12; = 10
+          <br />
+          (5 = Anzahl Elemente, 4 = Vergleichs- und Tauschoperationen, &frac12;
+          = im Mittel über alle Iterationen werden die Hälfte der Elemente
+          verglichen und verschoben) Ersetzt man 5 durch <em>n</em>, erhält man:
+          <br />
+          n * (n - 1) * &frac12;
+          <br />
+          Ausmultipliziert: &frac12; * (n<sup>2</sup> - n)
+          <br />
+          Die höchste vorkommende Potenz ist hier n<sup>2</sup>, woraus folgt,
+          dass die Zeitkomplexität des Bubble Sort im Worst-Case
+          O(n<sup>2</sup>) ist.
+        </p>
+        <h4>Average-Case</h4>
+        <p>
+          Im Average-Case kann man, grob gesagt, davon ausgehen, dass mehr oder
+          weniger halb so viele Tauschvorgägnge erforlgen wie im Worst-Case.
+          Daraus folgt: &frac14; * (n<sup>2</sup> - n)
+          <br />
+          Auch hier ist der höchste Exponent des Terms n<sup>2</sup>, woraus die
+          zeitkomplexität von O(n<sup>2</sup>) folgt.
+        </p>
+        <div class="imgContainer">
+          <img
+            src="styles/assets/average-case.svg"
+            alt="Alle Elemente der Reihe sind aufsteigend sortiert"
+            class="bspImg"
+          />
+        </div>
+      </div>
+    </main>
+    <div class="footer-container">
+      <footer>
+        <p><a href="attribution.html" id="attribution">Bildquellen</a></p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/TextPlugin.min.js"></script>
+
+    <!-- Eigene Scripts -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/animations.js"></script>
+  </body>
+</html>
